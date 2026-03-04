@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+
+  --color-ec-bg: #FAF9F6;
+  --color-ec-green-light: #A7F3D0;
+  --color-ec-green: #4ADE80;
+  --color-ec-green-dark: #34D399;
+  --color-ec-blue: #67E8F9;
+  --color-ec-text: #111827;
+  --color-ec-text-muted: #6B7280;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+body {
+  background-color: var(--color-ec-bg);
+  color: var(--color-ec-text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor for custom one */
+}
+
+/* Fallback for links/buttons to ensure they trigger cursor changes */
+a, button, input, textarea, select, [role="button"] {
+  cursor: none;
+}
+
+/* Glassmorphism utilities */
+.glass {
+  background: rgba(250, 249, 246, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(167, 243, 208, 0.3);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(167, 243, 208, 0.5);
+  box-shadow: 0 8px 32px 0 rgba(74, 222, 128, 0.05);
+}
+
+/* Text Selection */
+::selection {
+  background: var(--color-ec-green-light);
+  color: var(--color-ec-text);
+}
